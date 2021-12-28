@@ -1,4 +1,4 @@
-# Tuya IoTOS Embedded Demo Bluetooth LE Gesture Controller
+# TuyaOS Embedded Bluetooth Low Energy Intuitive Gesture Remote Control
 
 [English](./README.md) | [中文](./README_zh.md)
 
@@ -74,7 +74,7 @@
 |    ├── tuya_ble_sdk_demo.h               /* 实现tuya_ble_sdk的初始化，应用程序入口 */
 |    ├── tuya_imu_daq.h                    /* 传感数据采集 */
 |    ├── tuya_gesture_controller.h         /* 手势控制器管理中心 */
-|    ├── tuya_ges_act_rec.h                /* 手势动作识别 */
+|    ├── tuya_gesture_rec.h                /* 手势动作识别 */
 |    ├── tuya_net_proc.h                   /* 设备联网处理 */
 |    └── tuya_svc_angle_calc.h             /* 姿态解算服务 */
 └── src
@@ -92,7 +92,7 @@
      ├── tuya_ble_sdk_demo.c               /* 实现tuya_ble_sdk的初始化，应用程序入口 */
      ├── tuya_gesture_controller.c         /* 手势控制器管理中心 */
      ├── tuya_imu_daq.c                    /* 传感数据采集 */
-     ├── tuya_ges_act_rec.c                /* 手势动作识别 */
+     ├── tuya_gesture_rec.c                /* 手势动作识别 */
      ├── tuya_net_proc.c                   /* 设备联网处理 */
      └── tuya_svc_angle_calc.c             /* 姿态解算服务 */
 ```

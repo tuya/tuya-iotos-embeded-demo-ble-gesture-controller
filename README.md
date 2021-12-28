@@ -74,7 +74,7 @@ In this demo, we will show you how to make a smart gesture-based remote control.
 |    ├── tuya_ble_sdk_demo.h               /* Entry to the main application. SDK initialization. */
 |    ├── tuya_imu_daq.h                    /* Sensor data collection */
 |    ├── tuya_gesture_controller.h         /* Gesture control management */
-|    ├── tuya_ges_act_rec.h                /* Gesture recognition */
+|    ├── tuya_gesture_rec.h                /* Gesture recognition */
 |    ├── tuya_net_proc.h                   /* Network connection */
 |    └── tuya_svc_angle_calc.h             /* Gesture determination algorithm  */
 └── src
@@ -92,7 +92,7 @@ In this demo, we will show you how to make a smart gesture-based remote control.
      ├── tuya_ble_sdk_demo.c               /* Entry to the main application. SDK initialization. */
      ├── tuya_gesture_controller.c         /* Gesture control management */
      ├── tuya_imu_daq.c                    /* Sensor data collection  */
-     ├── tuya_ges_act_rec.c                /* Gesture recognition */
+     ├── tuya_gesture_rec.c                /* Gesture recognition */
      ├── tuya_net_proc.c                   /* Network connection */
      └── tuya_svc_angle_calc.c             /* Gesture determination algorithm */
 ```
