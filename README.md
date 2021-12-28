@@ -159,10 +159,10 @@ You can send the data of multiple DPs at a time. Make sure the total length does
 
 | Peripherals | I/O | Peripherals | I/O |
 | :---: | :---: | :---: | :---: |
-| Function key | I/O4 | Digital I/O power supply of MPU6050 (VLOGIC) | IO16_D |
-| Device pairing key | I/O5 | Interrupt output of MPU6050 (INT) | IO2_A |
-| LED indicator | I/O12 | SCL of the MPU6050's I2C | IO14_D |
-| TXD/RXD for UART communication | IO18_D/IO20_D | SDA of the MPU6050's I2C | I/O11 |
+| Function key | IO4 | Digital I/O power supply of MPU6050 (VLOGIC) | IO16_D |
+| Device pairing key | IO5 | Interrupt output of MPU6050 (INT) | IO2_A |
+| LED indicator | IO12 | SCL of the MPU6050's I2C | IO14_D |
+| TXD/RXD for UART communication | IO18_D/IO20_D | SDA of the MPU6050's I2C | IO11 |
 
 <br>
 
