@@ -105,7 +105,7 @@
 
 + `tuya_ble_sdk_demo_init()` 对 Tuya IoTOS Embeded Ble SDK 进行一些必要的初始化，该函数只执行一次。
 + `tuya_gesture_controller_init()` 对手势控制器应用程序进行一些必要的初始化。
-+ `tuya_gesture_controller_loop()` 用来循环执行手势控制器的应用代码，需在 main.c文件中的 `main()`函数中调用，置于 `for(;;)` 循环处即可。
++ `tuya_gesture_controller_loop()` 用来循环执行手势控制器的应用代码，需在 main.c 文件中的 `main()`函数中调用，置于 `for(;;)` 循环处即可。
 
 <br>
 
@@ -136,11 +136,11 @@
 
 - Dp_len：DP 数据长度，两个字节，每个 DP 数据类型的最大数据长度在涂鸦 IoT平台定义时指定。
 
-  - 若 `Dp_type` =1, 则 `Dp_len` 必须为 1。
-  - 若 `Dp_type` =2, 则 `Dp_len` 可以为1、2、4。
-  - 若 `Dp_type` =4, 则 `Dp_len` 必须为 1。
-  - 若 `Dp_type` =5, 则 `Dp_len` 可以为1、2、4。
-  - 若 `Dp_type` =0 或 3, 则 `Dp_len` 数值自定义，但必须小于在涂鸦 IoT平台定义时的最大长度。
+  - 若 `Dp_type` = 1, 则 `Dp_len` 必须为 1。
+  - 若 `Dp_type` = 2, 则 `Dp_len` 可以为1、2、4。
+  - 若 `Dp_type` = 4, 则 `Dp_len` 必须为 1。
+  - 若 `Dp_type` = 5, 则 `Dp_len` 可以为1、2、4。
+  - 若 `Dp_type` = 0 或 3, 则 `Dp_len` 数值自定义，但必须小于在涂鸦 IoT平台定义时的最大长度。
 
 - Dp_data：数据，dp_len 个字节数据。
 

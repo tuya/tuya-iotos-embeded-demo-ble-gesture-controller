@@ -6,7 +6,7 @@
 
 ## Overview
 
-In this demo, we will show you how to make a smart gesture-based remote control. Based on the [Tuya IoT Development Platform](https://iot.tuya.com/), we use Tuya's Bluetooth Low Energy module, SDK, and the Smart Life app to connect this thing to the cloud. This gesture remote control consists of one button for pairing, one button for turning on/off gesture recognition, one LED indicator, and one MPU6050 accelerometer and gyroscope sensor. This smart wand allows you to use gestures to control your device: roll clockwise, roll counter-clockwise, flick up or down, and flick left or right. You can also use the Smart Life app and Bluetooth gateway to achieve remote control of your smart home.
+In this demo, we will show you how to make a smart gesture-based remote control. Based on the [Tuya IoT Platform](https://iot.tuya.com/), we use Tuya's Bluetooth Low Energy module, SDK, and the Smart Life app to connect this thing to the cloud. This gesture remote control consists of one button for pairing, one button for turning on/off gesture recognition, one LED indicator, and one MPU6050 accelerometer and gyroscope sensor. This smart wand allows you to use gestures to control your device: roll clockwise, roll counter-clockwise, flick up or down, and flick left or right. You can also use the Smart Life app and Bluetooth gateway to achieve remote control of your smart home.
 
 <br>
 
@@ -15,7 +15,7 @@ In this demo, we will show you how to make a smart gesture-based remote control.
 ### Set up IDE
 
 - Install the integrated development environment (IDE) as per your chip platform.
-- To get the SDK, you need to create a product on the [Tuya IoT Development Platform](https://iot.tuya.com/). Then, go to the Hardware Development step, select a connection method, and then download the SDK.
+- To get the SDK, you need to create a product on the [Tuya IoT Platform](https://iot.tuya.com/). Then, go to the Hardware Development step, select a connection method, and then download the SDK.
 
 <br>
 
@@ -23,7 +23,7 @@ In this demo, we will show you how to make a smart gesture-based remote control.
 
 - Edit code
 
-   1. In `tuya_ble_sdk_demo.h`, populate the PID, MAC address, UUID, and authKey with the value you obtained from the [Tuya IoT Development Platform](https://iot.tuya.com/).
+   1. In `tuya_ble_sdk_demo.h`, populate the PID, MAC address, UUID, and authKey with the value you obtained from the [Tuya IoT Platform](https://iot.tuya.com/).
 
       ```c
       #define TY_DEVICE_NAME        "demo"
@@ -76,7 +76,7 @@ In this demo, we will show you how to make a smart gesture-based remote control.
 |    ├── tuya_gesture_controller.h         /* Gesture control management */
 |    ├── tuya_gesture_rec.h                /* Gesture recognition */
 |    ├── tuya_net_proc.h                   /* Network connection */
-|    └── tuya_svc_angle_calc.h             /* Gesture determination algorithm  */
+|    └── tuya_svc_angle_calc.h             /* Attitude calculation */
 └── src
      ├── driver
      |    ├── tuya_key.c                   /* Key driver */
@@ -94,7 +94,7 @@ In this demo, we will show you how to make a smart gesture-based remote control.
      ├── tuya_imu_daq.c                    /* Sensor data collection  */
      ├── tuya_gesture_rec.c                /* Gesture recognition */
      ├── tuya_net_proc.c                   /* Network connection */
-     └── tuya_svc_angle_calc.c             /* Gesture determination algorithm */
+     └── tuya_svc_angle_calc.c             /* Attitude calculation */
 ```
 
 <br>
@@ -121,7 +121,7 @@ Entry file: `tuya_ble_sdk_demo.c`
 
 **`p_dp_data`** parameter description:
 
-The [Tuya IoT Development Platform](https://iot.tuya.com/) manages data through DPs. Each product feature defined on the platform is described as a DP. The DP data consists of four parts. For more information, see [Custom Functions](https://developer.tuya.com/en/docs/iot/custom-functions?id=K937y38137c64).
+The [Tuya IoT Platform](https://iot.tuya.com/) manages data through DPs. Each product feature defined on the platform is described as a DP. The DP data consists of four parts. For more information, see [Custom Functions](https://developer.tuya.com/en/docs/iot/custom-functions?id=K937y38137c64).
 
 - `Dp_id`: The 1-byte parameter indicates the ID of a DP defined on the Tuya IoT Development Platform.
 
@@ -170,6 +170,8 @@ You can send the data of multiple DPs at a time. Make sure the total length does
 
 - [Bluetooth SDK Development](https://developer.tuya.com/en/docs/iot-device-dev/BLE-SDK?id=Kalgco5r2mr0h)
 - [Tuya Project Hub](https://developer.tuya.com/demo)
+
+<br>
 
 ## Technical support
 
