@@ -17,7 +17,6 @@
 #include "tuya_key.h"
 #include "tuya_led.h"
 #include "ty_ble.h"
-#include "tuya_app_adv.h"
 
 /***********************************************************
 ************************micro define************************
