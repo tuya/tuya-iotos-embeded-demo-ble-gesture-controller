@@ -6,7 +6,7 @@
 
 ## 简介
 
-本 demo 基于 [涂鸦IoT平台](https://iot.tuya.com/) 、涂鸦智能APP、IoTOS Embeded BLE SDK，使用涂鸦 BLE 系列模组快速组建一个手势控制器应用程序。该手势控制器主要由 1 个配网键、1 个识别功能开/关键、1 个指示灯和 1个惯性传感器 (MPU6050) 组成，实现了基础的甩动手势 (上、下、左、右) 和翻转手势 (顺时针、逆时针) 识别，并可通过涂鸦智能 APP 和蓝牙网关实现对其他设备的控制。
+本 demo 基于 [涂鸦IoT平台](https://iot.tuya.com/) 、涂鸦智能APP、IoTOS Embeded BLE SDK，使用涂鸦 BLE 系列模组快速组建一个手势控制器应用程序。该手势控制器主要由 1 个配网键、1 个识别功能开/关键、1 个指示灯和 1个惯性传感器 (MPU6050) 组成，实现了基础的甩动手势 (上、下、左、右) 和翻转手势 (顺时针、逆时针) 识别，并可通过智慧生活 APP 和蓝牙网关实现对其他设备的控制。
 
 <br>
 
@@ -101,11 +101,27 @@
 
 ### 应用入口
 
-入口文件：`tuya_ble_sdk_demo.c`
+入口文件：`tuya_ble_sdk_demo.c` 和 `tuya_ble_main.c`
 
-+ `tuya_ble_sdk_demo_init()` 对 Tuya IoTOS Embeded Ble SDK 进行一些必要的初始化，该函数只执行一次。
-+ `tuya_gesture_controller_init()` 对手势控制器应用程序进行一些必要的初始化。
-+ `tuya_gesture_controller_loop()` 用来循环执行手势控制器的应用代码，需在 main.c 文件中的 `main()`函数中调用，置于 `for(;;)` 循环处即可。
++ `tuya_ble_sdk_demo_init()` 对 Tuya IoTOS Embeded Ble SDK 进行一些必要的初始化，该函数只执行一次。`tuya_gesture_controller_init()` 对手势控制器应用程序进行一些必要的初始化。
+
+     ```c
+     void tuya_ble_sdk_demo_init(void)
+     {
+         ...
+         tuya_gesture_controller_init();
+     }
+     ```
+
++ `tuya_gesture_controller_loop()` 用来循环执行手势控制器的应用代码，需在如下函数中调用：
+
+     ```c
+     void tuya_ble_main_tasks_exec(void)
+     {
+         tuya_gesture_controller_loop();
+         tuya_sched_execute();
+     }
+     ```
 
 <br>
 

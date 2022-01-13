@@ -101,11 +101,27 @@ In this demo, we will show you how to make a smart gesture-based remote control.
 
 ### Entry to application
 
-Entry file: `tuya_ble_sdk_demo.c`
+Entry file: `tuya_ble_sdk_demo.c` and `tuya_ble_main.c`
 
-+ `tuya_ble_sdk_demo_init()` is run to initialize the SDK. This function is run only once.
-+ `tuya_gesture_controller_init()` is run to initialize the gesture control program.
-+ `tuya_gesture_controller_loop()` is used to loop the application code of the gesture control. Call this loop function in `main()` in the `main.c` file and place it in the `for(;;)`.
++ `tuya_ble_sdk_demo_init()` is run to initialize the SDK. This function is run only once. `tuya_gesture_controller_init()` is run to initialize the gesture control program.
+
+     ```c
+     void tuya_ble_sdk_demo_init(void)
+     {
+         ...
+         tuya_gesture_controller_init();
+     }
+     ```
+
++ `tuya_gesture_controller_loop()` is used to loop the application code of the gesture control. Call this loop function in `tuya_ble_main_tasks_exec()`.
+
+     ```c
+     void tuya_ble_main_tasks_exec(void)
+     {
+         tuya_gesture_controller_loop();
+         tuya_sched_execute();
+     }
+     ```
 
 <br>
 
